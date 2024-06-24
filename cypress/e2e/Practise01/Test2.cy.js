@@ -1,4 +1,5 @@
 /// <reference types='cypress' />
+/// <reference types='cypress' />
 describe('OrangeHRM', () => {
 
     beforeEach(function(){
@@ -20,8 +21,15 @@ describe('OrangeHRM', () => {
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Admin');
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input').type('admin123');
     cy.get('.oxd-button').click();
+    cy.get('.oxd-topbar-header-title > .oxd-icon').click();
     cy.get(':nth-child(1) > .oxd-main-menu-item > .oxd-text').click();
     cy.get('.orangehrm-horizontal-padding > .oxd-text').contains(6);
+         
+  })
+  it('Logout', function() {
+    cy.get('.oxd-userdropdown-tab > .oxd-icon').click();
+    cy.get(':nth-child(4) > .oxd-userdropdown-link {enter}');
+   
          
   })
   
