@@ -24,9 +24,6 @@ describe('OrangeHRM', () => {
     cy.get('.orangehrm-horizontal-padding > .oxd-text').contains(6);
          
   })
-  it.('Logout', function() {
-    
-  })
   
 
 
